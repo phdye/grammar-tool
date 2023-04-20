@@ -17,7 +17,7 @@ from plumbum import local, commands
 
 from grammar_tool.wrap import IndentWrapContext
 
-from grammar_tool.ChDir import ChDir
+from grammar_tool.chdir import ChDir
 
 from grammar_tool.pp import hash_pp
 

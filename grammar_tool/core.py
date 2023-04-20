@@ -99,14 +99,14 @@ from collections import namedtuple
 
 from docopt_attr import docopt_attr
 
-from .wrap import IndentWrap, IndentWrapContext
+from grammar_tool.wrap import IndentWrap, IndentWrapContext
 
-from .__init__ import __version__
+from grammar_tool.__init__ import __version__
 
-from .ChDir import ChDir
+from grammar_tool.chdir import ChDir
 
 from prettyprinter import cpprint as pp
-from .pp import hash_pp
+from grammar_tool.pp import hash_pp
 
 from grammar_tool.config import GtConfig
 
@@ -130,9 +130,17 @@ VERBOSE = namedtuple('VerboseLimits', 'MIN MAX')( 0, 9 )
 def main ( argv : list = sys.argv, depth : int = 0 ) :
 
     try :
+
         return worker ( argv, depth )
+
     except FileNotFoundError as e :
-        print(repr(e))
+        # Original :
+        #   str()   : [Errno 2] No such file or directory: PosixPath('work')
+        #   repr()  : FileNotFoundError(2, 'No such file or directory')
+        # Now :
+        #   str()   : No such file or directory: \
+        #               '/home/phdyex/src/python/grammar-tool/test-files/lark/adder/num/work'
+        logger.critical(str(e))
         return 1
 
 #------------------------------------------------------------------------------
@@ -165,7 +173,7 @@ def worker( argv : list, depth : int ) :
     ctx.depth = depth
     ctx.wrapper = wrapper
     if ctx.action not in ctx.ACTIONS:
-        ctx.wrapper.critical(f"{PROGRAM}:  <action> '{ctx.action}' not supported."
+        ctx.wrapper.critical(f"{ctx.program}:  <action> '{ctx.action}' not supported."
                f"  Please specify one of {ctx.ACTIONS.keys()}")
         return 1
 
