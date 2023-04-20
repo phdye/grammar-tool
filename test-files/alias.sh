@@ -7,6 +7,8 @@ if [[ "${VIRTUAL_ENV}" != */grammar-tool-* ]] ; then
     # NOTE: spawns a new shell, source again to get aliases
 fi
 
+GT_PYTHON=python3
+
 if [ -e this.pegen -o -e start.pegen ] ; then
     export GT_STYLE=pegen
 elif [ -e this.gram -o -e start.gram ] ; then
@@ -29,7 +31,14 @@ alias rc='      . tool/test-files/alias.sh'
 
 export PYPATH_TOOL=' export PYTHONPATH=.:tool:../tool '
 
-alias gt='      ${PYPATH_TOOL} && tool/s/scripts/grammar-tool.sh '
+#alias gt='      ${PYPATH_TOOL} && tool/s/scripts/grammar-tool.sh '
+alias gt='      ${PYPATH_TOOL} && time ${GT_PYTHON} -m grammar_tool '
+alias pyt='     ${PYPATH_TOOL} && time python3 -m grammar_tool '
+alias cpt='     ${PYPATH_TOOL} && time pypy3 -m grammar_tool '
+
+alias use-pypy='export GT_PYTHON=pypy3 '
+alias use-cpy=' export GT_PYTHON=python3 '
+alias use-numba=' export GT_PYTHON=numba '
 
 alias gbld='    gt --all ${GT_OPT} ${GT_STYLE_OPT} build              2>&1 '
 alias gtst='    gt --all ${GT_OPT} ${GT_STYLE_OPT} test               2>&1 '
