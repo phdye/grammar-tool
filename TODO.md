@@ -132,6 +132,8 @@ TODO
       - warning
       - error
 
+  ✓ ChDir.py => chdir.py
+
   - CHANGE 'style' to be 'generator'
 
   - Exception cleanup
@@ -139,7 +141,7 @@ TODO
       - manually raised exceptions should include some state info (i.e. missing file)
         OR may require high verbosity to identify activity.
       - Exceptions caught thus far :
-        ✓ `FileNotFoundError` -- maybe, but message is weak
+        ✓ `FileNotFoundError` -- maybe, but message weak unless tweaked
         - ...
       - Create custom exceptions to facilitate better error reporting
 
