@@ -2,17 +2,18 @@
   
 Grammar Parser Generators
 -------------------------
-  ✓ pegen     -- Based on python's own PEG parser generator
-  ✓ peg       -- Ian Piumarta's peg - PEG recursive-descent parser generators for C
-  - leg       -- Ian Piumarta's leg - 'peg' with closer to full lex/yacc syntax
-  ✓ Lark      -- Fastest python parser generator
-  ✓ ANTLR4
-  - TatSu
-  - Arpeggio
-  - Parsimonious
-  - Ply       -- David Beazley’s awesome PLY
-  - rPly      -- Rewrite of PLY with public API
-  - Sly       -- David Beazley revisit with clean/modern syntax, OOP
+  - ✓ pegen     -- Based on python's own PEG parser generator
+  - ✓ peg       -- Ian Piumarta's peg - PEG recursive-descent parser generators for C
+  - ◯ leg       -- Ian Piumarta's leg - 'peg' with closer to full lex/yacc syntax
+  - ✓ Lark      -- Fastest python parser generator
+  - ✓ ANTLR4
+  - ◯ TatSu
+  - ○ Arpeggio
+  - ○ Parsimonious
+  - ✓ ANTLR4
+  - ○ Ply       -- David Beazley’s awesome PLY
+  - ◯ rPly      -- Rewrite of PLY with public API
+  - ◯ Sly       -- David Beazley revisit with clean/modern syntax, OOP
   
 I hope you enjoy this tool and don't hesitate to reach out to me by email:
 phdye@acm.org or just open an issue / open a PR if you see any opportunity
