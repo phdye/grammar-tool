@@ -1,0 +1,77 @@
+line : a=word+ ( NEWLINE | ENDMARKER ) { Line(a) }
+
+word    : a=( name_ | number_ | op_ | string_ ) { a }
+
+name_   : a=NAME        { Word(a.string, a) }
+
+number_ : a=NUMBER      { Number(a.string, a) }
+
+op_     : a=OP          { Word(a.string, a) }
+
+string_ : a=STRING      { String(a.string, a) }
+        
+literal : a=( TIDLE
+            | BACKTICK
+            | AT
+            | HASH
+            | DOLLAR
+            | PERCENT
+            | CARET
+            | AMPERSAND
+            | ASTERIX
+            | LEFT_PARENTHESIS
+            | RIGHT_PARENTHESIS
+            | UNDERSCORE
+            | MINUS
+            | PLUS
+            | EQUAL
+            | LEFT_CURLY_BRACE
+            | RIGHT_CURLY_BRACE
+            | LEFT_SQAURE_BRACKET
+            | RIGHT_SQAURE_BRACKET
+            | BAR
+            | BACKSLASH
+            | COLON
+            | SEMICOLON
+            | DOUBLE_QUOTE
+            | SINGLE_QUOTE
+            | LEFT_ANGLE_BRACKET
+            | RIGHT_ANGLE_BRACKET
+            | COMMA
+            | PERIOD
+            | QUESTION_MARK
+            | FORWARD_SLASH
+            ) { a }
+
+TIDLE                   : a='~'  { Literal(a.string, a) }
+BACKTICK                : a='`'  { Literal(a.string, a) }
+AT                      : a='@'  { Literal(a.string, a) }
+HASH                    : a='#'  { Comment(a.string, a) }
+DOLLAR                  : a='$'  { Literal(a.string, a) }
+PERCENT                 : a='%'  { Literal(a.string, a) }
+CARET                   : a='^'  { Literal(a.string, a) }
+AMPERSAND               : a='&'  { Literal(a.string, a) }
+ASTERIX                 : a='*'  { Literal(a.string, a) }
+LEFT_PARENTHESIS        : a='('  { Literal(a.string, a) }
+RIGHT_PARENTHESIS       : a=')'  { Literal(a.string, a) }
+UNDERSCORE              : a='_'  { Literal(a.string, a) }
+MINUS                   : a='-'  { Literal(a.string, a) }
+PLUS                    : a='+'  { Literal(a.string, a) }
+EQUAL                   : a='='  { Literal(a.string, a) }
+LEFT_CURLY_BRACE        : a='{'  { Literal(a.string, a) }
+RIGHT_CURLY_BRACE       : a='}'  { Literal(a.string, a) }
+LEFT_SQAURE_BRACKET     : a='['  { Literal(a.string, a) }
+RIGHT_SQAURE_BRACKET    : a=']'  { Literal(a.string, a) }
+BAR                     : a='|'  { Literal(a.string, a) }
+BACKSLASH               : a='\\' { Literal(a.string, a) }
+COLON                   : a=':'  { Literal(a.string, a) }
+SEMICOLON               : a=';'  { Literal(a.string, a) }
+DOUBLE_QUOTE            : a='"'  { Literal(a.string, a) }
+SINGLE_QUOTE            : a="'"  { Literal(a.string, a) }
+LEFT_ANGLE_BRACKET      : a='<'  { Literal(a.string, a) }
+RIGHT_ANGLE_BRACKET     : a='>'  { Literal(a.string, a) }
+COMMA                   : a=','  { Literal(a.string, a) }
+PERIOD                  : a='.'  { Literal(a.string, a) }
+QUESTION_MARK           : a='?'  { Literal(a.string, a) }
+FORWARD_SLASH           : a='/'  { Literal(a.string, a) }
+

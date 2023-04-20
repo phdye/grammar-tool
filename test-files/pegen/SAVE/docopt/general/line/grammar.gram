@@ -1,0 +1,12 @@
+line : a=word+ ( NEWLINE | ENDMARKER ) { Line(a) }
+
+word    : a=( name_ | number_ | op_ | string_ ) { a }
+
+name_   : a=NAME        { Word(a.string, a) }
+
+number_ : a=NUMBER      { Number(a.string, a) }
+
+op_     : a=OP          { Word(a.string, a) }
+
+string_ : a=STRING      { String(a.string, a) }
+        

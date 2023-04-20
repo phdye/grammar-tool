@@ -1,0 +1,5 @@
+expr:
+      | l=expr '+' r=term       { ast.BinOp(left=l, op=ast.Add(), right=r, LOCATIONS) }
+      | l=expr '-' r=term       { ast.BinOp(left=l, op=ast.Sub(), right=r, LOCATIONS) }
+      | term
+

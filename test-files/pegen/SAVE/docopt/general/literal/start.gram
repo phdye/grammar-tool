@@ -1,0 +1,25 @@
+@class GeneratedParser
+
+@subheader'''
+
+from dataclasses import dataclass
+
+from tokens import _Token, Literal, Comment
+
+from tokenize import COMMENT
+
+from parser import CommentTokenInfo, ErrorTokenInfo
+
+from prettyprinter import pprint
+
+class Other(_Token):
+    pass
+
+'''
+
+start : a=( literal | other )+ NEWLINE? ENDMARKER { a }
+
+other : !literal NAME {
+    Comment(name.string) if isinstance(name, CommentTokenInfo) else Other(name.string)
+}  # , name -- oddly, this breaks the match
+

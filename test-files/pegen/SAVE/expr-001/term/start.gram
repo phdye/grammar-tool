@@ -1,0 +1,13 @@
+@class GeneratedParser
+
+@subheader'''
+
+from tokens import Name, Number
+
+'''
+
+start : a=term+ NEWLINE? ENDMARKER { a }
+
+# simplication before expr is defined
+expr: atom
+

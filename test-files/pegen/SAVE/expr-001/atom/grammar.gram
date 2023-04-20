@@ -1,0 +1,4 @@
+atom:
+      | a=NAME          { Name(a.string) }      # , a -- compares not working
+      | a=NUMBER        { Number(a.string) }    # , a -- compares not working
+

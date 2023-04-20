@@ -1,0 +1,2 @@
+add <- num _ '+' num { char* right = pop(); push("+"); push(right); }
+

@@ -1,0 +1,11 @@
+#
+
+alias c=' clear && script -c "make clean"  err '
+
+alias b=' clear && script -c "make all"    err '
+
+alias t=' clear && script -c "make test"   err '
+
+alias mx=' c && b && t '
+
+#

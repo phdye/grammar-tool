@@ -1,0 +1,5 @@
+start : a=atom+ NEWLINE? ENDMARKER { a }
+atom:
+      | a=NAME                  { a }
+      | a=NUMBER                { a }
+

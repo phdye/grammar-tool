@@ -1,0 +1,39 @@
+usage_intro :
+    # | ( ('U'|'u') ('S'|'s') ('A'|'a') ('G'|'g') ('E'|'e') ':' ) { UsageIntro('Usage:') }
+    | ( 'usage'
+      | 'usagE'
+      | 'usaGe'
+      | 'usaGE'
+      | 'usAge'
+      | 'usAgE'
+      | 'usAGe'
+      | 'usAGE'
+      | 'uSage'
+      | 'uSagE'
+      | 'uSaGe'
+      | 'uSaGE'
+      | 'uSAge'
+      | 'uSAgE'
+      | 'uSAGe'
+      | 'uSAGE'
+      | 'Usage'
+      | 'UsagE'
+      | 'UsaGe'
+      | 'UsaGE'
+      | 'UsAge'
+      | 'UsAgE'
+      | 'UsAGe'
+      | 'UsAGE'
+      | 'USage'
+      | 'USagE'
+      | 'USaGe'
+      | 'USaGE'
+      | 'USAge'
+      | 'USAgE'
+      | 'USAGe'
+      | 'USAGE'
+      ) ':'                     { UsageIntro('Usage:') }
+
+# This would be preferred but it returns None and isn't case insenstive
+# # usage_intro : a='Usage:' { UsageIntro('Usage:') }
+

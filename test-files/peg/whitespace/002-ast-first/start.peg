@@ -1,0 +1,5 @@
+start <- < ( wsx / _x )* > eof { printf("%s\n", yytext); }
+
+wsx  <- ws ':'
+_x   <- _ ':'
+

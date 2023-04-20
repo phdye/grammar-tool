@@ -1,0 +1,4 @@
+from plumbum.commands import ProcessExecutionError
+
+FAIL = ProcessExecutionError([], 1, '','')
+

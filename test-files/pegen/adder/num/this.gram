@@ -1,0 +1,3 @@
+num :
+    | a=NUMBER { float(a.string) if '.' in a.string else int(a.string) }
+

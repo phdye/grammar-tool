@@ -1,0 +1,12 @@
+# General Utility
+# ---------------
+
+OR <- _ [Oo][Rr] ( ':' / &ws )
+
+LBRACKET <- _ '['
+RBRACKET <- _ ']'
+LPAREN <- _ '('
+RPAREN <- _ ')'
+BAR <- _ '|'
+COMMA <- _ ','
+

@@ -1,0 +1,8 @@
+@class GeneratedParser
+
+@subheader'''
+
+from tokens import Number, Name
+
+'''
+

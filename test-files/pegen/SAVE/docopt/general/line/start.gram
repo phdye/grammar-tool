@@ -1,0 +1,10 @@
+@class GeneratedParser
+
+@subheader'''
+
+from tokens import Line, Word, Number, String
+
+'''
+
+start : a=line+ ENDMARKER { a }
+

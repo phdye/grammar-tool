@@ -1,0 +1,20 @@
+gunit flat
+
+@header ```
+from astpatch import TokenInfo_
+```
+
+atom:
+  "wonder"              ( TokenInfo_(token.NAME, 'wonder') )
+  "hello world"         ( TokenInfo_(token.NAME, 'hello'),
+                          TokenInfo_(token.NAME, 'world') )
+  "7"                   ( TokenInfo_(token.NUMBER, '7') )
+  "7 8"                 ( TokenInfo_(token.NUMBER, '7'), TokenInfo_(token.NUMBER, '8') )
+  "123.50"              ( TokenInfo_(token.NUMBER, '123.50') )
+
+usage_intro:
+  "Usage:"              ( UsageIntro('Usage:') )
+  "Usage :"             ( UsageIntro('Usage:') )
+  "usage:"              ( UsageIntro('Usage:') )
+  "UsAgE:"              ( UsageIntro('Usage:') )
+

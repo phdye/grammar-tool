@@ -1,0 +1,10 @@
+@class GeneratedParser
+
+@subheader'''
+
+from tokens import Name, Number
+
+'''
+
+start : a=atom+ NEWLINE? ENDMARKER { a }
+

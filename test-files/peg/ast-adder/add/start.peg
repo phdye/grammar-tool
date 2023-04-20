@@ -1,0 +1,2 @@
+start <- add eof { ast_print(pop()); printf("\n"); }
+

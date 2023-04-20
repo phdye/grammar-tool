@@ -1,0 +1,10 @@
+@class GeneratedParser
+
+@subheader'''
+
+from tokens import Number, Name
+
+'''
+
+start : a=expr_stmt+ ENDMARKER { a }
+

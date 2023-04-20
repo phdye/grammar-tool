@@ -1,0 +1,13 @@
+@class GeneratedParser
+
+@subheader'''
+
+from tokens import Line, Word, Number, String, Literal
+
+'''
+
+start : a=detail+ ENDMARKER { a }
+
+detail : a=line+    { a }
+       | a=literal  { a }
+

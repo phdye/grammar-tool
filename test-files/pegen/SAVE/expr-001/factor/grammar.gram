@@ -1,0 +1,8 @@
+factor:
+      | '(' e=expr ')'  { e }
+      | atom            { atom } # float(atom.value) }
+
+atom:
+      | a=NAME          { Name(a.string) }      # , a -- compares not working
+      | a=NUMBER        { Number(a.string) }    # , a -- compares not working
+

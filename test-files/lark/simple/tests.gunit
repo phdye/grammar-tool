@@ -1,0 +1,22 @@
+grammar adder
+
+num :
+  "1"         OK
+  "3"         OK
+  "7"         OK
+  "15"        OK
+  "1.1"       OK
+  "3.5"       OK
+  "a"         FAIL
+
+add :
+  "7 + 3"     OK
+  "1.1 + 1"   OK
+  "1 + 3 + 5" FAIL
+  "1 +"       FAIL
+
+start :
+  "8 + 4"     OK
+  " 9 + 5"    OK
+  " 1.3 + 1"  OK
+

@@ -1,0 +1,10 @@
+@class GeneratedParser
+
+@subheader'''
+
+from tokens import Word, Number, String
+
+'''
+
+start : a=word+ NEWLINE? ENDMARKER { a }
+

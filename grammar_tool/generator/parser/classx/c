@@ -1,0 +1,20 @@
+def create_test_class(name, test_map):
+    exec ( f"""
+from parameterized import parameterized
+
+from parser import Test_Parser
+
+class Test_{name}(Test_Parser):
+    @parameterized.expand({test_map})
+    def test_(self, name, value, expected_return):
+        self.parse_value(value, expected_return)
+""", inspect.stack()[1][0].f_globals )
+
+def create_no_test_class(name):
+    exec ( f"""
+import unittest
+
+class Test_{name}(unittest.TestCase):
+    def test_pass(self):
+        pass
+""", inspect.stack()[1][0].f_globals )

@@ -1,0 +1,9 @@
+# Additional syntax is required to distinguish between 'underscore' and 'ws'
+# since 'underscore' is zero or more 'ws'.  Hence, '<rule> :<value>:'.
+
+start <- < ( x_ws / x_underscore )* > eof { printf("%s\n", yytext); }
+
+x_ws <- 'ws :' ws ':'
+
+x_underscore <- '_ :' _ ':'
+

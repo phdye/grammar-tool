@@ -1,0 +1,87 @@
+eof                   : installed 'work'
+eof                   : compose complete
+eof                   : parser built
+eof                   : all tests passed
+<class 'grammar_tool.config.GtConfig'>
+{
+    'data': {
+        '_docopt': None,
+        '_____________________________________________________________________': False,
+        'argdebug': False,
+        'clean': False,
+        'help': False,
+        'terse_print_dir': False,
+        'version': False,
+        'style': 'peg',
+        'print': False,
+        'init': False,
+        'debug': False,
+        'verbose': '5',
+        'no_print': False,
+        'compose': False,
+        'build': False,
+        'all': True,
+        'action': 'test',
+        'ARG': [],
+        'ACTIONS': ('init', 'compose', 'build', 'test', 'clean'),
+        'depth': 0,
+        'wrapper': IndentWrap(current_column=0, column_width=2, column_stack=[], logger=<VerboseLogger grammar_tool (SUCCESS)>, area_fill='eof                   : ', spaces_fill=None),
+        'logger': <VerboseLogger grammar_tool (SUCCESS)>,
+        'area': 'eof',
+        'layers': [
+            pathlib.PosixPath(
+                '/home/phdyex/src/python/grammar-tool/grammar_tool/config.yaml'
+            )
+        ],
+        'GRAMMAR_STYLES': {
+            'pegen': GrammarSpec(name='pegen', description='Pegen is the PEG parser generator used internally by CPython to parse python source code.', url='https://github.com/we-like-parsers/pegen', ext='gram'),
+            'peg': GrammarSpec(name='peg', description="peg -- Ian Piumarta's PEG recursive-descent parser generator for C", url='https://piumarta.com/software/peg', ext='peg'),
+            'lark': GrammarSpec(name='lark', description='Lark - a parsing toolkit for Python (fastest early 2022) built with a focus on ergonomics, performance and modularity', url='https://github.com/lark-parser/lark', ext='lark'),
+            'antlr4': GrammarSpec(name='antlr4', description="ANTLR (ANother Tool for Language Recognition) is a powerful parser generator for reading, processing, executing, or translating structured text or binary files. It's widely used to build languages, tools, and frameworks. From a grammar, ANTLR generates a parser that can build and walk parse trees.", url='https://www.antlr.org/', ext='g4'),
+            'parsimonious': GrammarSpec(name='parsimonious', description='Parsimonious aims to be the fastest arbitrary-lookahead parser written in pure Python.', url='https://github.com/erikrose/parsimonious', ext='par'),
+            'tatsu': GrammarSpec(name='tatsu', description='TatSu is a tool that takes grammars in a variation of EBNF as input, and outputs memoizing (Packrat) PEG parsers in Python.', url='https://tatsu.readthedocs.io/en/stable', ext='ebnf'),
+            'dummy': GrammarSpec(name='dummy', description='dummy', url='dummy', ext='dummy')
+        }
+    },
+    'base': pathlib.PosixPath(
+        '/home/phdyex/src/python/grammar-tool/grammar_tool'
+    ),
+    'home': '/home/phdyex',
+    'model': {
+        'program': 'grammar-tool',
+        'NOT_A_PATH': ['DEFAULT_VERBOSE', 'DEFAULT_STYLE'],
+        'DEFAULT_VERBOSE': 3,
+        'DEFAULT_STYLE': 'lark',
+        'GRAMMAR_STYLES': {
+            'pegen': GrammarSpec(name='pegen', description='Pegen is the PEG parser generator used internally by CPython to parse python source code.', url='https://github.com/we-like-parsers/pegen', ext='gram'),
+            'peg': GrammarSpec(name='peg', description="peg -- Ian Piumarta's PEG recursive-descent parser generator for C", url='https://piumarta.com/software/peg', ext='peg'),
+            'lark': GrammarSpec(name='lark', description='Lark - a parsing toolkit for Python (fastest early 2022) built with a focus on ergonomics, performance and modularity', url='https://github.com/lark-parser/lark', ext='lark'),
+            'antlr4': GrammarSpec(name='antlr4', description="ANTLR (ANother Tool for Language Recognition) is a powerful parser generator for reading, processing, executing, or translating structured text or binary files. It's widely used to build languages, tools, and frameworks. From a grammar, ANTLR generates a parser that can build and walk parse trees.", url='https://www.antlr.org/', ext='g4'),
+            'parsimonious': GrammarSpec(name='parsimonious', description='Parsimonious aims to be the fastest arbitrary-lookahead parser written in pure Python.', url='https://github.com/erikrose/parsimonious', ext='par'),
+            'tatsu': GrammarSpec(name='tatsu', description='TatSu is a tool that takes grammars in a variation of EBNF as input, and outputs memoizing (Packrat) PEG parsers in Python.', url='https://tatsu.readthedocs.io/en/stable', ext='ebnf'),
+            'dummy': GrammarSpec(name='dummy', description='dummy', url='dummy', ext='dummy')
+        },
+        'work_base': './work',
+        'FIELDS': ['base', 'style', 'component', 'work_base'],
+        'DYNAMIC': ['component_base'],
+        'compose_order': 'compose-order.gt',
+        'components': 'components.gt',
+        'component_base': '../{component}',
+        'tests_base': '{work_base}/tests',
+        'test_this': 'test_this.py',
+        'grammar': 'grammar.{style.ext}',
+        'grammar_start': 'start.{style.ext}',
+        'test_grammar': '{work_base}/test_grammar.{style.ext}',
+        'this_grammar': 'this.{style.ext}',
+        'grammar_code': 'grammar.py',
+        'tokens_common': 'work/tokens-common.py',
+        'tokens_body': 'tokens-body.py',
+        'tokens': 'work/tests/tokens.py',
+        'model_style_base': '{base}/generator/{style.name}/model'
+    },
+    'verbose': 5,
+    'hierarchy': False,
+    'depth': 0,
+    'print_directory': False
+}
+False

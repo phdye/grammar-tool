@@ -1,0 +1,14 @@
+start :
+    | a=add NEWLINE* DEDENT* ENDMARKER { a }
+
+add :
+    | INDENT* a=add_pair          { a }
+    | DEDENT* a=add_pair          { a }
+
+add_pair :
+    | left=num '+' right=num      { [ left, right ] }
+    | a=num                       { a }
+
+num :
+    | a=NUMBER { float(a.string) if '.' in a.string else int(a.string) }
+

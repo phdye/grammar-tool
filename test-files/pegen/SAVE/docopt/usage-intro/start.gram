@@ -1,0 +1,10 @@
+@class GeneratedParser
+
+@subheader'''
+
+from tokens import UsageIntro
+
+'''
+
+start : a=usage_intro NEWLINE? ENDMARKER { a }
+

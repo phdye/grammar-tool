@@ -1,0 +1,18 @@
+============================= test session starts ==============================
+platform linux -- Python 3.9.5, pytest-7.2.2, pluggy-1.0.0 -- /home/phdyex/.cache/pypoetry/virtualenvs/grammar-tool-srSGyud3-py3.9/bin/python
+cachedir: .pytest_cache
+rootdir: /home/phdyex/src/python/grammar-tool, configfile: setup.cfg
+collecting ... collected 1 item
+
+tests/test_example.py::test_pow XFAIL ([NOTRUN] yield tests were rem...)
+
+=============================== warnings summary ===============================
+../../../../../../../.cache/pypoetry/virtualenvs/grammar-tool-srSGyud3-py3.9/lib/python3.9/site-packages/nose/importer.py:12
+  /home/phdyex/.cache/pypoetry/virtualenvs/grammar-tool-srSGyud3-py3.9/lib/python3.9/site-packages/nose/importer.py:12: DeprecationWarning: the imp module is deprecated in favour of importlib; see the module's documentation for alternative uses
+    from imp import find_module, load_module, acquire_lock, release_lock
+
+test-files/pegen/broken/pow/tests/test_example.py:8
+  test-files/pegen/broken/pow/tests/test_example.py:8: PytestCollectionWarning: yield tests were removed in pytest 4.0 - test_pow will be ignored
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+======================== 1 xfailed, 2 warnings in 0.13s ========================

@@ -1,0 +1,8 @@
+add : num "+" num
+
+?num : SIGNED_NUMBER
+
+%import common.SIGNED_NUMBER
+%import common.WS
+%ignore WS
+

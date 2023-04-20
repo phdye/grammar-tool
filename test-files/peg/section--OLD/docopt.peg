@@ -1,0 +1,129 @@
+docopt <- intro* usage detail* newline* eof
+
+detail <- _ blankline ( operand_section / options_section / description )
+
+# Intro -- typically a single line 
+# -----
+
+intro <- newline* !usage_leader !option !operand_line line+ newline
+
+# Usage Patterns
+# --------------
+
+usage <- newline* usage_leader newline* usage_line+
+
+usage_leader <- _ [Uu][Ss][Aa][Gg][Ee] _ ':'
+
+usage_line <- _ usage_pattern newline / _ usage_pattern eof
+usage_pattern <- OR? program choice
+
+# More permissive than progably any operating system but crucially,
+# should not be preventing any permissable characters.
+program <- _ string_no_whitespace
+
+# Left recursive ?
+#
+# choice <- expression BAR choice / expression
+# choice <- expression ( BAR choice )?
+#
+# Arpegio: easier to process as it does not cascade
+# choice <- expression ( BAR expression )*
+#   https://piumarta.com/software/peg -- infinite, does not complete
+#
+# ... May be harder to post-process in pass 1 or 2
+choice <- expression BAR expression
+        / expression
+
+# expression <- ( ( optional / required / argument ) repeated? )+
+expression <- repeatable+
+repeatable <- term repeating?
+term <- _ ( optional / required / argument )
+repeating <- _ '...'
+
+optional <- LBRACKET choice RBRACKET
+required <- LPAREN choice RPAREN
+argument <- _ ( option / operand / program )
+
+option <- _ ( long / short )
+# short option allowing for stacking or an immediate option-argument
+#   semantic analysis necessary to determine such
+#   and frankly, necessary for short_no_arg also.  If short_no_arg is
+#   first, '-fuz' becomes [ short_no_arg '-f', command 'uz' ]
+short <- short_stacked / short_no_arg
+short_no_arg <- '-' wx
+short_stacked <- '-' wx wx+
+long <- long_with_eq_arg / long_no_arg
+long_no_arg <- '--' wx wx*
+long_with_eq_arg <- long_with_eq_caps / long_with_eq_angle
+long_with_eq_caps <- '--' wx wx* '=' [A-Z][_A-Z]*
+long_with_eq_angle <- '--' wx wx* '=' operand_angled
+
+operand <- _ !option ( operand_all_caps / operand_angled )
+# operand_all_caps <- r'\b[A-Z][_A-Z0-9]+\b'
+operand_all_caps <- [A-Z][_A-Z0-9]+ &[^_A-Z0-9]
+                  / [A-Z][_A-Z0-9]+ eof
+# operand_angled <- r'<[-_:\w]+>'
+operand_angled <- '<' [-a-zA-Z0-9_=] '>'
+
+# Program Description
+# -------------------
+
+description <- line+
+line <- _ !option !operand_line ( words newline / words eof )
+words <- word+
+# word, initial character -- anything, works because of ! exclusions in rules
+word <- _ string_no_whitespace
+
+# Operand / Positional Arguments
+# ------------------------------
+
+# TRAILING when after an options section with multiline help
+operand_section <- newline* operand_intro? operand_line+
+operand_intro <- line+
+operand_line <- operand_detail newline / operand_detail eof
+operand_detail <- operand operand_help?
+operand_help <- _ words ( newline !operand operand_help )*
+
+# Options
+# -------
+
+options_section <- newline* options_intro? option_line+
+options_intro <- line+
+option_line <- _ option_detail newline / _ option_detail eof
+option_detail <- option_list option_help?
+# option_detail <- option_single option_help?
+
+option_list <- option_single ((COMMA / BAR)? option_list )?
+option_single <- short_with_arg / long_with_arg / short_no_arg / long_no_arg
+option_help <- _ words ( newline !( _ option_single) option_help )*
+
+short_with_arg <- short_no_arg operand
+long_with_arg <- long_with_eq_arg / long_with_gap_arg
+long_with_gap_arg <- long_no_arg operand
+
+# General Utility
+# ---------------
+
+# word character, non-whitespace
+wx <- [^ \t\r\n]
+string_no_whitespace <- wx+
+
+OR <- _ 'or' _
+
+LBRACKET <- _ '['
+RBRACKET <- _ ']'
+LPAREN <- _ '('
+RPAREN <- _ ')'
+BAR <- _ '|' _
+COMMA <- _ ',' _
+
+blankline <- _ &newline _ newline+
+
+eol <- [\r]? [\n] / [\r]
+newline <- _ eol
+
+eof <- _ !.
+
+ws <- [ \t]
+# wl <- [ \t] / eol
+_ <- ws*

@@ -1,0 +1,24 @@
+start[ast.Module]: a=expr_stmt* ENDMARKER { ast.Module(body=a or []) }
+
+expr_stmt:
+      | a=expr NEWLINE    { ast.Expr(value=a, LOCATIONS) }
+      | a=expr ENDMARKER  { ast.Expr(value=a, LOCATIONS) }
+
+expr:
+      | l=expr '+' r=term    { ast.BinOp(left=l, op=ast.Add(), right=r, LOCATIONS) }
+      | l=expr '-' r=term    { ast.BinOp(left=l, op=ast.Sub(), right=r, LOCATIONS) }
+      | term
+
+term:
+      | l=term '*' r=factor  { ast.BinOp(left=l, op=ast.Mult(), right=r, LOCATIONS) }
+      | l=term '/' r=factor  { ast.BinOp(left=l, op=ast.Div(), right=r, LOCATIONS) }
+      | factor
+
+factor:
+      | '(' e=expr ')'  { e }
+      | atom            { atom } # float(atom.value) }
+
+atom:
+      | a=NAME          { Name(a.string) }      # , a -- compares not working
+      | a=NUMBER        { Number(a.string) }    # , a -- compares not working
+

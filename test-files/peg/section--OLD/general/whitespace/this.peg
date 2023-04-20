@@ -1,0 +1,8 @@
+blankline <- &newline newline
+newline <- _ eol
+
+_ <- ws*
+ws <- [ \t]
+eol <- [\r]? [\n] / [\r]
+eof <- [ \t\r\n]* !.
+

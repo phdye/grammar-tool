@@ -1,0 +1,32 @@
+def parser_create_class(name, test_map, verbose=0):
+    code = f"""
+from parameterized import parameterized
+
+# From s/generator/<style>/model/tests/parser.py populated as work/tests/parser.py
+from parser import Test_Parser
+
+class Test_{name}(Test_Parser):
+    @parameterized.expand({test_map})
+    def test_(self, name, value, expected_return):
+        if ( isinstance(expected_return, list) and expected_return and 
+             expected_return[0] == 'eval' ):
+            expected_return = [ eval(expected_return[1]) ]
+        self.parse_value(value, expected_return, verbose={verbose})
+"""
+    # print(code)
+    exec(code, inspect.currentframe().f_back.f_globals)
+
+create_test_class = parser_create_class
+
+
+def parser_create_no_class(name):
+    exec ( f"""
+import unittest
+
+class Test_{name}(unittest.TestCase):
+    def test_pass(self):
+        pass
+""", inspect.stack()[1][0].f_globals )
+
+create_no_test_class = parser_create_no_class
+

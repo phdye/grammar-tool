@@ -1,0 +1,4 @@
+expr_stmt:
+      | a=expr NEWLINE    { ast.Expr(value=a, LOCATIONS) }
+      | a=expr ENDMARKER  { ast.Expr(value=a, LOCATIONS) }
+

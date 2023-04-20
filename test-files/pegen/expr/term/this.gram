@@ -1,0 +1,5 @@
+term:
+      | l=term '*' r=factor     { ast.BinOp(left=l, op=ast.Mult(), right=r, LOCATIONS) }
+      | l=term '/' r=factor     { ast.BinOp(left=l, op=ast.Div(), right=r, LOCATIONS) }
+      | factor
+

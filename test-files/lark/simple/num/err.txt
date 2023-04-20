@@ -1,0 +1,148 @@
+py310: 299 I find interpreter for spec PythonSpec(major=3, minor=10) [virtualenv/discovery/builtin.py:56]
+py310: 299 D discover exe for PythonInfo(spec=CPython3.10.8.final.0-64, exe=/home/phdyex/.cache/pypoetry/virtualenvs/grammar-tool-srSGyud3-py3.10/bin/python, platform=linux, version='3.10.8 (main, Nov  4 2022, 13:48:29) [GCC 11.2.0]', encoding_fs_io=utf-8-utf-8) in /home/conda/conda [virtualenv/discovery/py_info.py:437]
+py310: 300 D filesystem is case-sensitive [virtualenv/info.py:24]
+py310: 301 D got python info of /home/conda/conda/bin/python3.10 from /home/phdyex/host-specific/local/share/virtualenv/py_info/1/94723eb7b6cc46c9592aa6b8f8edcc9f0127565143d2124cbe5de313192dd642.json [virtualenv/app_data/via_disk_folder.py:129]
+py310: 323 I proposed PythonInfo(spec=CPython3.10.8.final.0-64, system=/home/conda/conda/bin/python3.10, exe=/home/phdyex/.cache/pypoetry/virtualenvs/grammar-tool-srSGyud3-py3.10/bin/python, platform=linux, version='3.10.8 (main, Nov  4 2022, 13:48:29) [GCC 11.2.0]', encoding_fs_io=utf-8-utf-8) [virtualenv/discovery/builtin.py:63]
+py310: 324 D accepted PythonInfo(spec=CPython3.10.8.final.0-64, system=/home/conda/conda/bin/python3.10, exe=/home/phdyex/.cache/pypoetry/virtualenvs/grammar-tool-srSGyud3-py3.10/bin/python, platform=linux, version='3.10.8 (main, Nov  4 2022, 13:48:29) [GCC 11.2.0]', encoding_fs_io=utf-8-utf-8) [virtualenv/discovery/builtin.py:65]
+py310: 347 I create virtual environment via CPython3Posix(dest=/home/phdyex/src/python/grammar-tool/test-files/lark/adder/num/work/.tox/py310, clear=False, no_vcs_ignore=False, global=False) [virtualenv/run/session.py:48]
+py310: 348 D create folder /home/phdyex/src/python/grammar-tool/test-files/lark/adder/num/work/.tox/py310/bin [virtualenv/util/path/_sync.py:9]
+py310: 348 D create folder /home/phdyex/src/python/grammar-tool/test-files/lark/adder/num/work/.tox/py310/lib/python3.10/site-packages [virtualenv/util/path/_sync.py:9]
+py310: 348 D write /home/phdyex/src/python/grammar-tool/test-files/lark/adder/num/work/.tox/py310/pyvenv.cfg [virtualenv/create/pyenv_cfg.py:30]
+py310: 349 D    home = /home/conda/conda/bin [virtualenv/create/pyenv_cfg.py:34]
+py310: 349 D    implementation = CPython [virtualenv/create/pyenv_cfg.py:34]
+py310: 349 D    version_info = 3.10.8.final.0 [virtualenv/create/pyenv_cfg.py:34]
+py310: 349 D    virtualenv = 20.21.0 [virtualenv/create/pyenv_cfg.py:34]
+py310: 349 D    include-system-site-packages = false [virtualenv/create/pyenv_cfg.py:34]
+py310: 349 D    base-prefix = /home/conda/conda [virtualenv/create/pyenv_cfg.py:34]
+py310: 349 D    base-exec-prefix = /home/conda/conda [virtualenv/create/pyenv_cfg.py:34]
+py310: 349 D    base-executable = /home/conda/conda/bin/python3.10 [virtualenv/create/pyenv_cfg.py:34]
+py310: 350 D symlink /home/conda/conda/bin/python3.10 to /home/phdyex/src/python/grammar-tool/test-files/lark/adder/num/work/.tox/py310/bin/python [virtualenv/util/path/_sync.py:28]
+py310: 350 D create virtualenv import hook file /home/phdyex/src/python/grammar-tool/test-files/lark/adder/num/work/.tox/py310/lib/python3.10/site-packages/_virtualenv.pth [virtualenv/create/via_global_ref/api.py:89]
+py310: 351 D create /home/phdyex/src/python/grammar-tool/test-files/lark/adder/num/work/.tox/py310/lib/python3.10/site-packages/_virtualenv.py [virtualenv/create/via_global_ref/api.py:92]
+py310: 351 D ============================== target debug ============================== [virtualenv/run/session.py:50]
+py310: 352 D debug via /home/phdyex/src/python/grammar-tool/test-files/lark/adder/num/work/.tox/py310/bin/python /home/phdyex/.cache/pypoetry/virtualenvs/grammar-tool-srSGyud3-py3.10/lib/python3.10/site-packages/virtualenv/create/debug.py [virtualenv/create/creator.py:193]
+py310: 351 D {
+  "sys": {
+    "executable": "/home/phdyex/src/python/grammar-tool/test-files/lark/adder/num/work/.tox/py310/bin/python",
+    "_base_executable": "/home/phdyex/src/python/grammar-tool/test-files/lark/adder/num/work/.tox/py310/bin/python",
+    "prefix": "/home/phdyex/src/python/grammar-tool/test-files/lark/adder/num/work/.tox/py310",
+    "base_prefix": "/home/conda/conda",
+    "real_prefix": null,
+    "exec_prefix": "/home/phdyex/src/python/grammar-tool/test-files/lark/adder/num/work/.tox/py310",
+    "base_exec_prefix": "/home/conda/conda",
+    "path": [
+      "/home/phdyex/src/python/grammar-tool/test-files/lark/adder/num/work",
+      "/home/conda/conda/lib/python310.zip",
+      "/home/conda/conda/lib/python3.10",
+      "/home/conda/conda/lib/python3.10/lib-dynload",
+      "/home/phdyex/src/python/grammar-tool/test-files/lark/adder/num/work/.tox/py310/lib/python3.10/site-packages"
+    ],
+    "meta_path": [
+      "<class '_virtualenv._Finder'>",
+      "<class '_frozen_importlib.BuiltinImporter'>",
+      "<class '_frozen_importlib.FrozenImporter'>",
+      "<class '_frozen_importlib_external.PathFinder'>"
+    ],
+    "fs_encoding": "utf-8",
+    "io_encoding": "utf-8"
+  },
+  "version": "3.10.8 (main, Nov  4 2022, 13:48:29) [GCC 11.2.0]",
+  "makefile_filename": "/home/conda/conda/lib/python3.10/config-3.10-x86_64-linux-gnu/Makefile",
+  "os": "<module 'os' from '/home/conda/conda/lib/python3.10/os.py'>",
+  "site": "<module 'site' from '/home/conda/conda/lib/python3.10/site.py'>",
+  "datetime": "<module 'datetime' from '/home/conda/conda/lib/python3.10/datetime.py'>",
+  "math": "<module 'math' from '/home/conda/conda/lib/python3.10/lib-dynload/math.cpython-310-x86_64-linux-gnu.so'>",
+  "json": "<module 'json' from '/home/conda/conda/lib/python3.10/json/__init__.py'>"
+} [virtualenv/run/session.py:51]
+py310: 381 I add seed packages via FromAppData(download=False, pip=bundle, setuptools=bundle, wheel=bundle, via=copy, app_data_dir=/home/phdyex/host-specific/local/share/virtualenv) [virtualenv/run/session.py:55]
+py310: 385 D install pip from wheel /home/phdyex/.cache/pypoetry/virtualenvs/grammar-tool-srSGyud3-py3.10/lib/python3.10/site-packages/virtualenv/seed/wheels/embed/pip-23.0.1-py3-none-any.whl via CopyPipInstall [virtualenv/seed/embed/via_app_data/via_app_data.py:47]
+py310: 386 D install setuptools from wheel /home/phdyex/.cache/pypoetry/virtualenvs/grammar-tool-srSGyud3-py3.10/lib/python3.10/site-packages/virtualenv/seed/wheels/embed/setuptools-67.4.0-py3-none-any.whl via CopyPipInstall [virtualenv/seed/embed/via_app_data/via_app_data.py:47]
+py310: 388 D install wheel from wheel /home/phdyex/.cache/pypoetry/virtualenvs/grammar-tool-srSGyud3-py3.10/lib/python3.10/site-packages/virtualenv/seed/wheels/embed/wheel-0.38.4-py3-none-any.whl via CopyPipInstall [virtualenv/seed/embed/via_app_data/via_app_data.py:47]
+py310: 392 D copy directory /home/phdyex/host-specific/local/share/virtualenv/wheel/3.10/image/1/CopyPipInstall/wheel-0.38.4-py3-none-any/wheel to /home/phdyex/src/python/grammar-tool/test-files/lark/adder/num/work/.tox/py310/lib/python3.10/site-packages/wheel [virtualenv/util/path/_sync.py:36]
+py310: 392 D copy /home/phdyex/host-specific/local/share/virtualenv/wheel/3.10/image/1/CopyPipInstall/setuptools-67.4.0-py3-none-any/setuptools-67.4.0.virtualenv to /home/phdyex/src/python/grammar-tool/test-files/lark/adder/num/work/.tox/py310/lib/python3.10/site-packages/setuptools-67.4.0.virtualenv [virtualenv/util/path/_sync.py:36]
+py310: 395 D copy directory /home/phdyex/host-specific/local/share/virtualenv/wheel/3.10/image/1/CopyPipInstall/setuptools-67.4.0-py3-none-any/_distutils_hack to /home/phdyex/src/python/grammar-tool/test-files/lark/adder/num/work/.tox/py310/lib/python3.10/site-packages/_distutils_hack [virtualenv/util/path/_sync.py:36]
+py310: 395 D copy directory /home/phdyex/host-specific/local/share/virtualenv/wheel/3.10/image/1/CopyPipInstall/pip-23.0.1-py3-none-any/pip to /home/phdyex/src/python/grammar-tool/test-files/lark/adder/num/work/.tox/py310/lib/python3.10/site-packages/pip [virtualenv/util/path/_sync.py:36]
+py310: 399 D copy directory /home/phdyex/host-specific/local/share/virtualenv/wheel/3.10/image/1/CopyPipInstall/setuptools-67.4.0-py3-none-any/setuptools-67.4.0.dist-info to /home/phdyex/src/python/grammar-tool/test-files/lark/adder/num/work/.tox/py310/lib/python3.10/site-packages/setuptools-67.4.0.dist-info [virtualenv/util/path/_sync.py:36]
+py310: 408 D copy directory /home/phdyex/host-specific/local/share/virtualenv/wheel/3.10/image/1/CopyPipInstall/setuptools-67.4.0-py3-none-any/setuptools to /home/phdyex/src/python/grammar-tool/test-files/lark/adder/num/work/.tox/py310/lib/python3.10/site-packages/setuptools [virtualenv/util/path/_sync.py:36]
+py310: 415 D copy /home/phdyex/host-specific/local/share/virtualenv/wheel/3.10/image/1/CopyPipInstall/wheel-0.38.4-py3-none-any/wheel-0.38.4.virtualenv to /home/phdyex/src/python/grammar-tool/test-files/lark/adder/num/work/.tox/py310/lib/python3.10/site-packages/wheel-0.38.4.virtualenv [virtualenv/util/path/_sync.py:36]
+py310: 417 D copy directory /home/phdyex/host-specific/local/share/virtualenv/wheel/3.10/image/1/CopyPipInstall/wheel-0.38.4-py3-none-any/wheel-0.38.4.dist-info to /home/phdyex/src/python/grammar-tool/test-files/lark/adder/num/work/.tox/py310/lib/python3.10/site-packages/wheel-0.38.4.dist-info [virtualenv/util/path/_sync.py:36]
+py310: 427 D generated console scripts wheel3.10 wheel wheel3 wheel-3.10 [virtualenv/seed/embed/via_app_data/pip_install/base.py:41]
+py310: 489 D copy directory /home/phdyex/host-specific/local/share/virtualenv/wheel/3.10/image/1/CopyPipInstall/setuptools-67.4.0-py3-none-any/pkg_resources to /home/phdyex/src/python/grammar-tool/test-files/lark/adder/num/work/.tox/py310/lib/python3.10/site-packages/pkg_resources [virtualenv/util/path/_sync.py:36]
+py310: 505 D copy /home/phdyex/host-specific/local/share/virtualenv/wheel/3.10/image/1/CopyPipInstall/setuptools-67.4.0-py3-none-any/distutils-precedence.pth to /home/phdyex/src/python/grammar-tool/test-files/lark/adder/num/work/.tox/py310/lib/python3.10/site-packages/distutils-precedence.pth [virtualenv/util/path/_sync.py:36]
+py310: 506 D generated console scripts  [virtualenv/seed/embed/via_app_data/pip_install/base.py:41]
+py310: 542 D copy directory /home/phdyex/host-specific/local/share/virtualenv/wheel/3.10/image/1/CopyPipInstall/pip-23.0.1-py3-none-any/pip-23.0.1.dist-info to /home/phdyex/src/python/grammar-tool/test-files/lark/adder/num/work/.tox/py310/lib/python3.10/site-packages/pip-23.0.1.dist-info [virtualenv/util/path/_sync.py:36]
+py310: 543 D copy /home/phdyex/host-specific/local/share/virtualenv/wheel/3.10/image/1/CopyPipInstall/pip-23.0.1-py3-none-any/pip-23.0.1.virtualenv to /home/phdyex/src/python/grammar-tool/test-files/lark/adder/num/work/.tox/py310/lib/python3.10/site-packages/pip-23.0.1.virtualenv [virtualenv/util/path/_sync.py:36]
+py310: 544 D generated console scripts pip3 pip pip-3.10 pip3.10 [virtualenv/seed/embed/via_app_data/pip_install/base.py:41]
+py310: 544 I add activators for Bash, CShell, Fish, Nushell, PowerShell, Python [virtualenv/run/session.py:61]
+py310: 546 D write /home/phdyex/src/python/grammar-tool/test-files/lark/adder/num/work/.tox/py310/pyvenv.cfg [virtualenv/create/pyenv_cfg.py:30]
+py310: 547 D    home = /home/conda/conda/bin [virtualenv/create/pyenv_cfg.py:34]
+py310: 547 D    implementation = CPython [virtualenv/create/pyenv_cfg.py:34]
+py310: 547 D    version_info = 3.10.8.final.0 [virtualenv/create/pyenv_cfg.py:34]
+py310: 547 D    virtualenv = 20.21.0 [virtualenv/create/pyenv_cfg.py:34]
+py310: 547 D    include-system-site-packages = false [virtualenv/create/pyenv_cfg.py:34]
+py310: 547 D    base-prefix = /home/conda/conda [virtualenv/create/pyenv_cfg.py:34]
+py310: 547 D    base-exec-prefix = /home/conda/conda [virtualenv/create/pyenv_cfg.py:34]
+py310: 547 D    base-executable = /home/conda/conda/bin/python3.10 [virtualenv/create/pyenv_cfg.py:34]
+py310: 550 W install_deps> python -I -m pip install prettyprinter pytest pytest-cov [tox/tox_env/api.py:428]
+Collecting prettyprinter
+  Using cached prettyprinter-0.18.0-py2.py3-none-any.whl (48 kB)
+Collecting pytest
+  Using cached pytest-7.3.1-py3-none-any.whl (320 kB)
+Collecting pytest-cov
+  Using cached pytest_cov-4.0.0-py3-none-any.whl (21 kB)
+Collecting Pygments>=2.2.0
+  Using cached Pygments-2.15.0-py3-none-any.whl (1.1 MB)
+Collecting colorful>=0.4.0
+  Using cached colorful-0.5.5-py2.py3-none-any.whl (201 kB)
+Collecting packaging
+  Using cached packaging-23.1-py3-none-any.whl (48 kB)
+Collecting pluggy<2.0,>=0.12
+  Using cached pluggy-1.0.0-py2.py3-none-any.whl (13 kB)
+Collecting exceptiongroup>=1.0.0rc8
+  Using cached exceptiongroup-1.1.1-py3-none-any.whl (14 kB)
+Collecting iniconfig
+  Using cached iniconfig-2.0.0-py3-none-any.whl (5.9 kB)
+Collecting tomli>=1.0.0
+  Using cached tomli-2.0.1-py3-none-any.whl (12 kB)
+Collecting coverage[toml]>=5.2.1
+  Using cached coverage-7.2.3-cp310-cp310-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (227 kB)
+Installing collected packages: colorful, tomli, Pygments, pluggy, packaging, iniconfig, exceptiongroup, coverage, pytest, prettyprinter, pytest-cov
+Successfully installed Pygments-2.15.0 colorful-0.5.5 coverage-7.2.3 exceptiongroup-1.1.1 iniconfig-2.0.0 packaging-23.1 pluggy-1.0.0 prettyprinter-0.18.0 pytest-7.3.1 pytest-cov-4.0.0 tomli-2.0.1
+py310: 3907 I exit 0 (3.36 seconds) /home/phdyex/src/python/grammar-tool/test-files/lark/adder/num/work> python -I -m pip install prettyprinter pytest pytest-cov pid=8463 [tox/execute/api.py:275]
+py310: 3908 W commands[0]> pytest --cov --cov-append --cov-report=term-missing [tox/tox_env/api.py:428]
+============================= test session starts ==============================
+platform linux -- Python 3.10.8, pytest-7.3.1, pluggy-1.0.0
+cachedir: test-files/lark/adder/num/work/.tox/py310/.pytest_cache
+rootdir: /home/phdyex/src/python/grammar-tool
+configfile: setup.cfg
+plugins: cov-4.0.0
+collected 0 items / 1 error
+
+==================================== ERRORS ====================================
+______ ERROR collecting test-files/lark/adder/num/work/tests/test_this.py ______
+ImportError while importing test module '/home/phdyex/src/python/grammar-tool/test-files/lark/adder/num/work/tests/test_this.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/home/conda/conda/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+tests/test_this.py:5: in <module>
+    from parser import create_test_class
+tests/parser.py:12: in <module>
+    from grammar import Lark_StandAlone
+E   ModuleNotFoundError: No module named 'grammar'
+
+---------- coverage: platform linux, python 3.10.8-final-0 -----------
+Name                 Stmts   Miss  Cover   Missing
+--------------------------------------------------
+tests/parser.py         29     21    28%   14-64
+tests/test_this.py       8      7    12%   7-25
+--------------------------------------------------
+TOTAL                   37     28    24%
+
+=========================== short test summary info ============================
+ERROR tests/test_this.py
+!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!
+=============================== 1 error in 0.09s ===============================
+py310: 4298 C exit 2 (0.39 seconds) /home/phdyex/src/python/grammar-tool/test-files/lark/adder/num/work> pytest --cov --cov-append --cov-report=term-missing pid=8496 [tox/execute/api.py:275]
+  py310: FAIL code 2 (4.01=setup[3.62]+cmd[0.39] seconds)
+  evaluation failed :( (4.19 seconds)

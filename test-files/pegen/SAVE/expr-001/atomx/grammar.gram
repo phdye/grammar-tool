@@ -1,0 +1,4 @@
+atom:
+      | a=NAME          { a }
+      | a=NUMBER        { a }
+

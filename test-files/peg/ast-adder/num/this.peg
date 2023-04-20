@@ -1,0 +1,2 @@
+num <- _ < [-]?[0-9]+ >  { push(AST_NEW(AST_NUMBER, atoi(yytext))); }
+

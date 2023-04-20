@@ -1,0 +1,92 @@
+program : grammar-tool
+
+NOT_A_PATH :
+  - DEFAULT_VERBOSE
+  - DEFAULT_STYLE
+
+DEFAULT_VERBOSE     : 3
+DEFAULT_STYLE       : lark
+
+GRAMMAR_STYLES :
+
+  pegen :
+    description     : "Pegen is the PEG parser generator used internally by
+                       CPython to parse python source code."
+    url             : 'https://github.com/we-like-parsers/pegen'
+    extension       : gram
+
+  peg :
+    description     : "peg -- Ian Piumarta's PEG recursive-descent parser
+                       generator for C"
+    url             : https://piumarta.com/software/peg
+    extension       : peg
+
+  lark :
+    description     : "Lark - a parsing toolkit for Python (fastest early 2022)
+                       built with a focus on ergonomics, performance and modularity"
+    url             : https://github.com/lark-parser/lark
+    extension       : lark
+
+  antlr4 :
+    description     : "ANTLR (ANother Tool for Language Recognition) is a powerful
+                       parser generator for reading, processing, executing, or
+                       translating structured text or binary files. It's widely
+                       used to build languages, tools, and frameworks. From a
+                       grammar, ANTLR generates a parser that can build and walk
+                       parse trees."
+    url             : https://www.antlr.org/
+    extension       : g4
+
+  parsimonious :
+    description     : "Parsimonious aims to be the fastest arbitrary-lookahead
+                       parser written in pure Python."
+    url             : https://github.com/erikrose/parsimonious
+    extension       : par
+
+  tatsu :
+    description     : "TatSu is a tool that takes grammars in a variation
+                       of EBNF as input, and outputs memoizing (Packrat)
+                       PEG parsers in Python."
+    url             : https://tatsu.readthedocs.io/en/stable
+    extension       : ebnf
+
+  dummy :
+    description     : dummy
+    url             : dummy
+    extension       : dummy
+
+  # Arpeggio
+  # PlyPlus
+  # pijnu
+  # PyParsing
+
+work_base           : './work'
+
+FIELDS:
+  - base
+  - style
+  - component
+  - work_base
+
+DYNAMIC:            # resolve on each getattr as input(s) change
+  - component_base
+
+compose_order       : "compose-order.gt"
+components          : "components.gt"
+component_base      : "../{component}"
+
+tests_base          : "{work_base}/tests"
+test_this           : "test_this.py"
+
+grammar             : "grammar.{style.ext}"
+grammar_start       : "start.{style.ext}"
+test_grammar        : "{work_base}/test_grammar.{style.ext}"
+this_grammar        : "this.{style.ext}"
+grammar_code        : "grammar.py"
+
+tokens_common       : "work/tokens-common.py"
+tokens_body         : "tokens-body.py"
+tokens              : "work/tests/tokens.py"
+
+model_style_base    : "{base}/generator/{style.name}/model"
+

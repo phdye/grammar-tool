@@ -1,0 +1,2 @@
+line : a=word+ ( NEWLINE | ENDMARKER ) { Line(a) }
+

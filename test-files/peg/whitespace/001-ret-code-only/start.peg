@@ -1,0 +1,5 @@
+START <- ( wsx / _x )* eof
+
+wsx  <- ws ':'
+_x   <- _ ':'
+

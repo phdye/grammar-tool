@@ -1,0 +1,4 @@
+factor:
+      | '(' e=expr ')'          { e }
+      | atom                    { atom }
+

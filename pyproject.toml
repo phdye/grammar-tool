@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "grammar-tool"
+version = "0.1.0"
+description = "Grammar composition and testing tool"
+authors = ["phdye <phdye@acm.org>"]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "grammar_tool"}]
+
+[tool.poetry.dependencies]
+python = ">=3.9,<4"
+docopt = "^0.6.2"
+django = "^4.1.7"
+pytest = "^7.2.2"
+parsimonious = "^0.10.0"
+plumbum = "^1.8.1"
+pegen = "^0.2.0"
+parameterized = "^0.9.0"
+pyyaml = "^6.0"
+pytest-socket = "^0.6.0"
+pytest-coverage = "^0.0"
+coverage = "^7.2.3"
+verboselogs = "^1.7"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

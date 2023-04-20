@@ -1,0 +1,5 @@
+start : a=factor+ NEWLINE? ENDMARKER { a }
+
+# simplication before expr is defined
+expr: atom
+

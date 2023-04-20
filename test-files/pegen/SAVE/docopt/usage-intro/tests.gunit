@@ -1,0 +1,8 @@
+gunit this;
+
+usage_intro:
+   "Usage:"   ( UsageIntro('Usage:') )
+   "Usage :"  ( UsageIntro('Usage:') )
+   "usage:"   ( UsageIntro('Usage:') )
+   "UsAgE:"   ( UsageIntro('Usage:') )
+

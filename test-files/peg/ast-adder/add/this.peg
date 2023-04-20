@@ -1,0 +1,2 @@
+add <- num _ '+' num { AST* right=pop(); push(AST_NEW(AST_ADD, pop(), right)); }
+

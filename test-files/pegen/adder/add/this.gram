@@ -1,0 +1,4 @@
+add :
+    | INDENT* a=add_pair          { a }
+    | DEDENT* a=add_pair          { a }
+

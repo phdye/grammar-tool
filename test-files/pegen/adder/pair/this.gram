@@ -1,0 +1,3 @@
+add_pair :
+    | left=num '+' right=num      { [ left, right ] }
+

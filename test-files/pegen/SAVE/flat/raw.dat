@@ -1,0 +1,11 @@
+Script started on 2023-04-04 14:41:09-04:00 [TERM="screen.xterm-256color" TTY="/dev/pts/11" COLUMNS="108" LINES="31"]
+[1m=========================================== test session starts ============================================[0m
+platform linux -- Python 3.10.8, pytest-7.2.2, pluggy-1.0.0
+rootdir: /home/phdyex/src/python/grammar-tool, configfile: setup.cfg
+[1mcollecting ... [0m[1mcollected 38 items                                                                                         [0m
+
+tests/test_pegen.py [32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m
+
+[32m============================================ [32m[1m38 passed[0m[32m in 0.13s[0m[32m ============================================[0m
+
+Script done on 2023-04-04 14:41:10-04:00 [COMMAND_EXIT_CODE="0"]

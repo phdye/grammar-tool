@@ -1,0 +1,24 @@
+Script started on 2023-04-16 20:13:14-04:00 [TERM="screen.xterm-256color" TTY="/dev/pts/19" COLUMNS="126" LINES="35"]
+[1m==================================================== test session starts =====================================================[0m
+platform linux -- Python 3.10.8, pytest-7.2.2, pluggy-1.0.0 -- /home/phdyex/.cache/pypoetry/virtualenvs/grammar-tool-srSGyud3-py3.10/bin/python
+cachedir: .pytest_cache
+rootdir: /home/phdyex/src/python/grammar-tool, configfile: setup.cfg
+plugins: socket-0.6.0, cov-4.0.0
+[1mcollecting ... [0m
+
+Replace ' ' -> ''
+Without ' '
+Replace ' ' -> ''
+Without ' '
+[1mcollected 6 items                                                                                                            [0m
+
+tests/test_this.py::Test_add::test__0_add_7_3 [32mPASSED[0m
+tests/test_this.py::Test_add::test__1_add_7_3 [32mPASSED[0m
+tests/test_this.py::Test_add::test__2_add_1_5_1 [32mPASSED[0m
+tests/test_this.py::Test_add::test__3_a [32mPASSED[0m
+tests/test_this.py::Test_add::test__4_add_1_3_5 [32mPASSED[0m
+tests/test_this.py::Test_add::test__5_add_1_nothing [32mPASSED[0m
+
+[32m===================================================== [32m[1m6 passed[0m[32m in 0.12s[0m[32m ======================================================[0m
+
+Script done on 2023-04-16 20:13:14-04:00 [COMMAND_EXIT_CODE="0"]

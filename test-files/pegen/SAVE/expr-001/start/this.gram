@@ -1,0 +1,2 @@
+start[ast.Module]: a=expr_stmt* ENDMARKER { ast.Module(body=a or []) }
+

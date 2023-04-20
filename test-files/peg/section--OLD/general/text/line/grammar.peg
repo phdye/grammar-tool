@@ -1,0 +1,12 @@
+line <- word+ newline / word+ eof
+word <- _ wx+
+wx <- [^ \t\r\n]
+
+blankline <- &newline newline
+newline <- _ eol
+
+_ <- ws*
+ws <- [ \t]
+eol <- [\r]? [\n] / [\r]
+eof <- [ \t\r\n]* !.
+

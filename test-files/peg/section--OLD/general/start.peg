@@ -1,0 +1,10 @@
+START <- component eof
+
+component	<- OR
+			/  LBRACKET
+			/  RBRACKET
+            /  LPAREN
+            /  RPAREN
+            /  BAR
+            /  COMMA
+
