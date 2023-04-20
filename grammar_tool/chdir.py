@@ -26,14 +26,29 @@ class ChDir ( object ) :
 
     __slots__ = ( 'origin', 'target' )
 
-    def __init__(self, path):
+    def __init__(self, target):
+        """
+        Initialize ChDir context manager with the <target> path and
+        record current working directory as <origin>.
+
+        Parameters
+        ----------
+          target : str
+            Destination directory
+        """
+        self.target = str(Path(target).resolve())
         self.origin = str(Path(os.getcwd()).resolve())
-        self.target = str(Path(path).resolve())
 
     def __enter__(self):
+        """
+        When entering the context, change working director to <target>.
+        """
         os.chdir(self.target)
 
     def __exit__(self, *args):
+        """
+        When exiting the context, change working director to <origin>.
+        """
         os.chdir(self.origin)
 
 #------------------------------------------------------------------------------
