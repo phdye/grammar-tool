@@ -1,3 +1,0 @@
-# can't test at this level as line uses '_' from ../whitespace
-terminate <- !.
-

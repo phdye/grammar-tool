@@ -1,4 +1,0 @@
-line <- word+ newline / word+ eof
-word <- _ wx+
-wx <- [^ \t\r\n]
-

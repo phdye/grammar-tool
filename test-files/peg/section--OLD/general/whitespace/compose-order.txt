@@ -1,6 +1,0 @@
-blankline
-newline
-underscore
-ws
-eol
-eof
