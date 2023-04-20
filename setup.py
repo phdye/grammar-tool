@@ -11,7 +11,7 @@ __version__ = re.search("^__version__\s*=\s*'(.*)'",
 setup(
     name = package_name,
     version = __version__,
-    description=r"Grammar composition and testing tool",
+    description=r"Grammar Composition and Testing Tool",
     author='Philip H. Dye',
     author_email='philip@phd-solutions.com',
     packages=find_packages(exclude=("s",)),
